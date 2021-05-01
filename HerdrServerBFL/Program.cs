@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using MySql.Data.MySqlClient;
+using Renci.SshNet;
 
 namespace HerdrServer
 {
@@ -123,9 +124,9 @@ namespace HerdrServer
                     //SPLIT DATA BY ";"
                     string[] messageIn = data.Split(';');
 
-                    initializeDatabase();
-                    Console.WriteLine("INITIALIZED");
-
+                    //initializeDatabase();
+                    //Console.WriteLine("INITIALIZED");
+                    connectionString = "server=localhost;port=3306;user=user1;database=helloworld;password=password";
                     //PROCESS DATA INTO QUERIES
                     using (MySqlConnection connection = new MySqlConnection(connectionString))
                     {
@@ -138,13 +139,13 @@ namespace HerdrServer
                                 Console.WriteLine("CASE 1");
 
                                 // This code uses an SqlCommand based on the SqlConnection.
-                                using (MySqlCommand command = new MySqlCommand("DESCRIBE hall;", connection))
+                                using (MySqlCommand command = new MySqlCommand("select * from howdy;", connection))
                                 using (MySqlDataReader reader = command.ExecuteReader())
                                 {
                                     while (reader.Read())
                                     {
-                                        Console.WriteLine("{0} {1}",
-                                            reader.GetInt32(0), reader.GetString(1));
+                                        Console.WriteLine("{0}",
+                                            reader.GetString(0));
                                     }
                                 }
 

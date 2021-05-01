@@ -9,6 +9,9 @@
     <Reference Include="MySql.Data">
       <HintPath>..\..\MySql.Data.DLL</HintPath>
     </Reference>
+    <Reference Include="Renci.SshNet">
+      <HintPath>..\..\..\..\..\Desktop\Renci.SshNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
