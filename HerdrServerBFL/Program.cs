@@ -124,9 +124,9 @@ namespace HerdrServer
                     //SPLIT DATA BY ";"
                     string[] messageIn = data.Split(';');
 
-                    //initializeDatabase();
+                    initializeDatabase();
                     //Console.WriteLine("INITIALIZED");
-                    connectionString = "server=localhost;port=3306;user=user1;database=helloworld;password=password";
+                    //connectionString = "server=localhost;port=3306;user=user1;database=helloworld;password=password";
                     //PROCESS DATA INTO QUERIES
                     using (MySqlConnection connection = new MySqlConnection(connectionString))
                     {
@@ -139,13 +139,13 @@ namespace HerdrServer
                                 Console.WriteLine("CASE 1");
 
                                 // This code uses an SqlCommand based on the SqlConnection.
-                                using (MySqlCommand command = new MySqlCommand("select * from howdy;", connection))
+                                using (MySqlCommand command = new MySqlCommand("select * from hall;", connection)) //select * from howdy;
                                 using (MySqlDataReader reader = command.ExecuteReader())
                                 {
                                     while (reader.Read())
                                     {
                                         Console.WriteLine("{0}",
-                                            reader.GetString(0));
+                                            reader.GetInt32(0));
                                     }
                                 }
 
