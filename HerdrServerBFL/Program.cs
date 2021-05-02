@@ -54,12 +54,12 @@ namespace HerdrServer
                 //password = "SeniorProject21";
 
             connectionString =
-                "Server=" + server + ";" +
+                "server=" + server + ";" +
                 "port=33060;" +
                 //"Network=" + Library + ";" + 
-                "Database=" + database + ";" +
-                "User Id=" + uid + ";" +
-                "Password=" + password + ";";
+                "database=" + database + ";" +
+                "user=" + uid + ";" +
+                "password=" + password + ";";
 
             Console.WriteLine("Connection String: {0}", connectionString);
         }
