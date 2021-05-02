@@ -55,7 +55,7 @@ namespace HerdrServer
 
             connectionString =
                 "Server=" + server + ";" +
-                "port=3306;" +
+                "port=33060;" +
                 //"Network=" + Library + ";" + 
                 "Database=" + database + ";" +
                 "User Id=" + uid + ";" +
