@@ -36,7 +36,7 @@ namespace HerdrServer
             connectionString = "Server=" + server + ";" + "Database=" + 
             database + ";" + "User Id=" + uid + ";" + "Password=" + password + ";";*/
 
-            server = "tcp:3.23.163.170,3306";
+            server = "tcp:3.23.163.170";
             //server = "tcp:127.0.0.1,3306";
             database = "herdr";
 
@@ -55,6 +55,7 @@ namespace HerdrServer
 
             connectionString =
                 "Server=" + server + ";" +
+                "port=3306;" +
                 //"Network=" + Library + ";" + 
                 "Database=" + database + ";" +
                 "User Id=" + uid + ";" +
