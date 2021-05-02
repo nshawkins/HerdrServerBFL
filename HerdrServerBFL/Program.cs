@@ -37,21 +37,20 @@ namespace HerdrServer
 
             server = "tcp:3.23.163.170,3306";
             //server = "tcp:127.0.0.1,3306";
-            //Library = "DBMSSOCN"; 
-            database = "herdrdb";
+            database = "herdr";
 
             //STANDARD USER
-            //uid = "herdru1";
-            //password = "ST3V3nordstrom<3";
+                uid = "herdru1";
+                password = "ST3V3nordstrom<3";
             //ADMIN USER
-            // uid = "admin";
-            // password = "ctOqE9NPuC1WtJWXooSD";
+                // uid = "admin";
+                // password = "ctOqE9NPuC1WtJWXooSD";
             //NEW USER
-            //uid = "ec2server";
-            //password = "HavanaBanana!123";
+                //uid = "ec2server";
+                //password = "HavanaBanana!123";
             //NEWER USER
-            uid = "dbadmin";
-            password = "SeniorProject21";
+                //uid = "dbadmin";
+                //password = "SeniorProject21";
 
             connectionString =
                 "Server=" + server + ";" +
