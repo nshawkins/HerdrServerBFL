@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using MySql.Data.MySqlClient;
 using Renci.SshNet;
+using System.Security.Permissions;
 
 namespace HerdrServer
 {
