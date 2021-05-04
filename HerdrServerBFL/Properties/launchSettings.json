@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HerdrServerBFL": {
+      "commandName": "Project",
+      "sqlDebugging": true
+    }
+  }
+}
